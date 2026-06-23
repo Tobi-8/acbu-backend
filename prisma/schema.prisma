@@ -456,8 +456,8 @@ model KycApplication {
   feeTxHash               String?   @map("fee_tx_hash") @db.VarChar(255)
   feeMintTransactionId    String?   @map("fee_mint_transaction_id") @db.Uuid
   machineConfidence       Decimal?  @map("machine_confidence") @db.Decimal(3, 2)
-  machineRedactedPayload  Json?     @map("machine_redacted_payload")
-  machineExtractedPayload Json?     @map("machine_extracted_payload")
+  machineRedactedPayload  String?   @map("machine_redacted_payload") @db.Text
+  machineExtractedPayload String?   @map("machine_extracted_payload") @db.Text
   rejectionReason         String?   @map("rejection_reason") @db.VarChar(500)
   resolvedAt              DateTime? @map("resolved_at") @db.Timestamp(6)
   createdAt               DateTime  @default(now()) @map("created_at") @db.Timestamp(6)

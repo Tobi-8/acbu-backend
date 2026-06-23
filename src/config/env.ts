@@ -366,6 +366,9 @@ export const config = {
     failOpenRetryBaseMs: env.OPENAI_FAIL_OPEN_RETRY_BASE_MS,
   },
 
+  // PII encryption key for KYC and sensitive field encryption
+  piiEncryptionKey: env.PII_ENCRYPTION_KEY,
+
   // CORS — explicit origins only; wildcard * is rejected (incompatible with credentials)
   corsOrigin: parseCorsOrigins(env.CORS_ORIGIN, env.NODE_ENV),
 };
